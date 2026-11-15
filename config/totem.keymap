@@ -28,8 +28,14 @@
 
 &mt {
     tapping-term-ms = <170>;
-    quick-tap-ms = <150>;
+    quick-tap-ms = <100>;
     flavor = "tap-preferred";
+};
+
+&lt {
+    tapping-term-ms = <240>;
+    quick-tap-ms = <150>;
+    flavor = "balanced";
 };
 
 / {
@@ -38,26 +44,24 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT";
             flavor = "tap-preferred";
-            tapping-term-ms = <175>;
-            quick-tap-ms = <175>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 36 37 11 12 13 34 33>;
-            require-prior-idle-ms = <20>;
         };
 
         hm_r: homerow_mods_r {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_RIGHT";
             flavor = "tap-preferred";
-            tapping-term-ms = <175>;
-            quick-tap-ms = <175>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34 16 17 18>;
-            require-prior-idle-ms = <20>;
         };
 
         hm_meta_l: hm_meta_l {
